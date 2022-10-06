@@ -20,7 +20,7 @@ export default createStore({
   },
   getters: {
     fullName: function(state) {
-      return(`${state.firstName} ${state.lastName}`)
+      return `${state.firstName} ${state.lastName}`
     }
   }
   

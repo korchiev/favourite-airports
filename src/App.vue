@@ -13,9 +13,10 @@
 
 <script>
 import { ref } from 'vue'
-import { useStore } from 'vuex'
+//import { useStore } from 'vuex'
 import allAirports from '@/data/airports.js'
 import AirportCard from '@/components/AirportCard.vue'
+import store from './store'
 
 export default {
   components: {
@@ -23,7 +24,7 @@ export default {
   },
   setup() {
     const airports = ref(allAirports)
-    const store = useStore()
+    //const store = useStore()
     const addToFavourites = (payload)=>{
       console.log(payload)
       store.dispatch("addToFavorites", payload)
